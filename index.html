@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://js.arcgis.com/4.31/"></script>
+    <title>Portfolio</title>
+    
+  </head>
+
+  <body class="has-fixed-header">
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#">JEAN</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+            <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+            <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+            <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+            <i class="esri-icon-drag-horizontal"></i>
+        </div>
+      </header>
+    </div>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/jean.jpg" alt="Foto de Jean Alemán" loading="lazy">
+            </div>
+            <h1>JEAN ALEMÁN</h1>
+            <h2>Lic. Geógrafo - Téc. Informático</h2>
+            <h2>Experto en GIS</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PERFIL -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Jean Alemán.</span>
+                Tengo experiencia en el desarrollo de metodologías de trabajo mediante Sistemas de Información Geográfica (SIG), 
+                incluyendo investigación, manejo y procesamiento de datos geográficos, estructura de datos, diseño de aplicaciones web, 
+                y automatización de flujos de trabajo. Además, he trabajado en análisis espacial, clasificación de usos del suelo, planes reguladores, 
+                así como en el levantamiento de información catastral mediante SIG y otras tecnologías.
+            </p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Licencias</strong>
+                            B1, A2
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +506 8460-5741
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            jean.aleman.v@gmail.com
+                        </li>
+                        <li>
+                            <strong>Inglés</strong>
+                            Intermedio
+                        </li>
+                        <li>
+                            <strong>Colegio</strong>
+                            Profesionales en Geografía
+                        </li>
+                        <li>
+                            <strong>LinkedIn</strong>
+                            jean-alemán-villagra
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Heredia, Costa Rica
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>CONSUTOR</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Aptitudes</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="esri-icon-globe custom-icon"></i>
+                            <span>ArcGIS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="esri-icon-globe custom-icon2"></i>
+                            <span>QGIS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>GE PRO</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-css"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-python"></i>
+                            <span>PYTHON</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-code"></i>
+                            <span>ARCADE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="downloadCV" data-cv-url="https://raw.githubusercontent.com/Jean-Avg/CV-Jean-Alem-n/2fc13b4687c587a71f93ca8ee149b2b34da60e7c/Curriculum%20Jean%20Alem%C3%A1n.pdf">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <!--INFO EDUCACIÓN -->
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Bach. Ingeniería Informática</h4>
+                        <span class="casa">Universidad Estatal a Distancia</span>
+                        <span class="fecha">Septiembre, 2024 - Actualidad</span>
+                        <p>Bachillerato en Ingeniería Informática</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Lic. en Ciencias Geográficas</h4>
+                        <span class="casa">Universidad Nacional</span>
+                        <span class="fecha">Noviembre - 2024</span>
+                        <p>Licenciatura en Ciencias Geográficas con énfasis en Ordenamiento del Territorio.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Tec. en Computación e Informática</h4>
+                        <span class="casa">Universidad Estatal a Distancia</span>
+                        <span class="fecha">Agosto - 2024</span>
+                        <p>Técnico en Computación e informática.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Bach. Ciencias Geográficas</h4>
+                        <span class="casa">Universidad Nacional</span>
+                        <span class="fecha">2015 - 2018</span>
+                        <p>Bachillerato en Ciencias Geográficas con énfasis en Ordenamiento del Territorio.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--INFO LABORAL -->
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Geógrafo | Tec. GIS</h4>
+                        <span class="casa">Empresa de Servicios Públicos de Heredia</span>
+                        <span class="fecha">2021 - Actualidad</span>
+                        <div class="tareas">
+                            <ul>
+                                <li class="tareas-t">Administración y actualización de bases de datos geográficas.</li>
+                                <li class="tareas-t">Optimización de procesos y automatización de flujos de trabajo.</li>
+                                <li class="tareas-t">Manejo y gestión de datos espaciales en la nube (AGOL).</li>
+                                <li class="tareas-t">Capacitación técnica en el uso de herramientos y aplicaciones GIS.</li>
+                                <li class="tareas-t">Creación de dashboard, mapas y aplicaciones web.</li>
+                                <li class="tareas-t">Publicación y administración de Servicios Open Geospatial Consortium (OGC).</li>
+                                <li class="tareas-t">Programación y diseño de formularios inteligentes con Survey123 y Fiel Maps.</li>
+                                <li class="tareas-t">Digitalización de procesos internos del negocio.</li>
+                            </ul>
+                        </div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Geógrafo | Consultor</h4>
+                        <span class="casa">Universidad Nacional</span>
+                        <span class="fecha">Abril, 2019 - Enero, 2020</span>
+                        <div class="tareas">
+                            <ul>
+                                <li class="tareas-t">Levantamiento de información espacial y actuliazación del uso de suelos.</li>
+                                <li class="tareas-t">Elaboración de base de datos geográfica, caracterización institucional y de servicios.</li>
+                                <li class="tareas-t">Diagnóstico de la infraestructura existente e informe técnico.</li>
+                            </ul>
+                        </div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section id="portfolio" class="portafolio active">
+        <h2 class="heading">Portafolio</span></h2>
+        <div class="portafolio-container">
+            <div class="portafolio-box">
+                <div class="portafolio-detail active">
+                    <div class="p numb">01</div>
+                    <h3>Portal GIS Web</h3>
+                    <p>En este apartado encontrará un sitio web creado con la herramienta de ArcGIS Hub de ArcGIS Online.
+                        El mismo, contiene varias secciones informativas, donde se integra información de diferentes aplicaciones web como:
+                        Visores, Dashboard, Instant apps e Story Maps; tanto del Negocio de Residuos de la ESPH como de terceras instituciones.
+                        Para ingregar al portal, dar clic en el logotipo de abajo.
+                    </p>
+                    <div class="tech">
+                        <p>ArcGIS Online, ArcGIS Hub</p>
+                    </div>
+                    <div class="live-arcgis">
+                        <a href="https://residuos-esph.opendata.arcgis.com/"><i class="fa-solid fa-earth-americas"></i><span>PortalGIS</span></a>
+                        <!--<a href="#"><i class="fa-solid fa-layer-group"></i><span>Layers</span></a>-->
+                        <!--<a href="#"><i class="fa-solid fa-map"></i><span>Mapas</span></a>-->
+                    </div>
+                </div>
+
+                <div class="portafolio-detail">
+                    <div class="p numb">02</div>
+                    <h3>Cartografía</h3>
+                    <p>Esta sección contiene acceso a diferentes mapas elaborados y diseñados por mi persona.
+                        Acá, podrá tener acceso a una carpeta en Drive, dónde podrá ver y descargar el material cartográfico. Para esto,
+                        haga clic en el simbolo de abajo.
+                    </p>
+                    <div class="tech">
+                        <p>Cartografía, mapas</p>
+                    </div>
+                    <div class="live-arcgis">
+                        <!--<a href="#"><i class="fa-solid fa-earth-americas"></i><span>ArcGIS</span></a>-->
+                        <!--<a href="#"><i class="fa-solid fa-layer-group"></i><span>Layers</span></a>-->
+                        <a href="https://drive.google.com/drive/folders/1pFLuZN_a1O4uAIN1yY20Z6-7huadGYIn?usp=sharing"><i class="fa-solid fa-map"></i><span>Mapas</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portafolio-box">
+                <div class="portfolio-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="img/portalGIS.png">
+                        </div>
+                        <div class="img-item">
+                            <img src="img/Cartografia.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col formulario-col">
+                    <div class="formulario-container">
+                        <h3>¡Conectemos!</h3>
+                        <p>¿Tienes un proyecto en mente? Me encantaría escuchar sobre él.</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="input-group">
+                                <input type="text" id="nombre" placeholder="Tu Nombre" required>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            
+                            <div class="input-group">
+                                <input type="tel" id="telefono" placeholder="Número telefónico">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            
+                            <div class="input-group">
+                                <input type="email" id="email" placeholder="Dirección de correo" required>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            
+                            <div class="input-group">
+                                <select id="tema" required>
+                                    <option value="">Selecciona un tema</option>
+                                    <option value="consulta-gis">Consultoría GIS</option>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="automatizacion">Automatización</option>
+                                    <option value="capacitacion">Capacitación</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+                            
+                            <div class="input-group">
+                                <textarea id="mensaje" rows="6" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                                <i class="fa-solid fa-message"></i>
+                            </div>
+                            
+                            <button type="submit" class="btn-enviar">
+                                <span class="btn-text">Enviar Mensaje</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span class="overlay"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Mapa e Información -->
+                <div class="col mapa-col">
+                    <div class="mapa-container">
+                        <!-- Mapa ArcGIS -->
+                        <div id="mapDiv" class="mapa-web"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
